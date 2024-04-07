@@ -26,9 +26,9 @@ export default async function Home() {
 
     return (
         <>
-            <ScrollShadow>
-            <div className="flex flex-col mt-2  ">
 
+            <div className="flex flex-col mt-2  ">
+                <ScrollShadow className=" h-[400px]">
 
             <header className="flex justify-between items-center pb-5 ml-5">
                 <div className="h-10 w-10 ">
@@ -54,9 +54,9 @@ export default async function Home() {
                 }
 
             </ul>
-
+                </ScrollShadow >
             </div>
-        </ScrollShadow>
+
         </>
     );
 }
