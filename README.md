@@ -1,3 +1,4 @@
+![image](https://github.com/janee06/todolist/assets/144605984/e30babc5-8c60-4771-8dc4-cbfafe6ac501)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
