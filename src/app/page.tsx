@@ -2,9 +2,10 @@ import Link from "next/link";
 import Todo from "../components/todo";
 import {prisma} from "./db";
 import {User} from "@nextui-org/react";
-import {Checkbox} from "@nextui-org/react";
 import {Divider} from "@nextui-org/react";
 import {ScrollShadow} from "@nextui-org/react";
+
+
 
 
 
@@ -50,7 +51,7 @@ export default async function Home() {
 
 
                     // eslint-disable-next-line react/jsx-key
-                    todos.map((todo: TodoType)=>  <div> {todo.id} {todo.title}  <Divider/> <Checkbox className=" flex flex-col-start"></Checkbox> </div>  )
+                    todos.map((todo: TodoType)=> <div> {todo.id} {todo.title}  <Divider/> </div>   )
                 }
 
             </ul>
