@@ -51,7 +51,7 @@ export default async function Home() {
 
 
                     // eslint-disable-next-line react/jsx-key
-                    todos.map((todo: TodoType)=> <div> {todo.id} {todo.title}  <Divider/> </div>   )
+                    todos.map((todo: TodoType)=> <div> key={todo.id} {todo.title}  <Divider/> </div>   )
                 }
 
             </ul>
