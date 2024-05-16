@@ -4,6 +4,7 @@ import {prisma} from "./db";
 import {User} from "@nextui-org/react";
 import {Divider} from "@nextui-org/react";
 import {ScrollShadow} from "@nextui-org/react";
+import ItemTile from "../components/item_file";
 
 
 
@@ -22,6 +23,15 @@ export default async function Home() {
     function getTodos() {
         return prisma.todo.findMany({
         });
+    }
+    async function deleteTodo(id : string) {
+        let len = id.length;
+        let indexPos = len -1;
+        let number = parseInt(id.substring(indexPos) , 10 ) + 1;
+        return await prisma.todo.delete({
+            where: {
+                id: id,
+            }});
     }
     const todos = await getTodos();
 
@@ -50,8 +60,13 @@ export default async function Home() {
 
 
 
-                    // eslint-disable-next-line react/jsx-key
-                    todos.map((todo: TodoType)=> <div> key={todo.id} {todo.title}  <Divider/> </div>   )
+
+                    todos.map(
+                        (todo: TodoType) => <>
+                            <ItemTile id={todo.id} content={todo.title} onDelete={()=>deleteTodo(todo.id)}></ItemTile>
+
+                        </>
+                        )
                 }
 
             </ul>
